@@ -19,6 +19,7 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
      - name: compose-run
+       uses: actions/checkout@v2
        shell: bash
        run: |
         docker-compose up --build
