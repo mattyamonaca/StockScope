@@ -22,4 +22,3 @@ jobs:
        shell: bash
        run: |
         docker-compose up --build
-	
