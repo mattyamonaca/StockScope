@@ -1,0 +1,10 @@
+PATH:
+ kabuka : 
+  "bucket":
+   "stock-scope-bucket"
+  "key":
+   "stocks"
+  "filename":
+   "us"
+ meigara : "data/meigara"
+ correlation : "data/pre/correlation.csv"

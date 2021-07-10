@@ -1,0 +1,9 @@
+version: "3"
+services:
+ ml-container:
+  container_name: ml-container
+  build:
+   context: .
+   dockerfile: ./dockerfiles/ml/Dockerfile
+  volumes:
+   - $HOME/.aws:/root/.aws/
