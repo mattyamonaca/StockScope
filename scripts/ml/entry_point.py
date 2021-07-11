@@ -138,20 +138,14 @@ def simulate(name, start, end):
     
     
     print(results)
-    #fpr, tpr, thresholds = metrics.roc_curve(results["target"],results["pred"])
-
-    #auc = metrics.auc(fpr,tpr)
-    #print(auc)
     
 
 if __name__ == "__main__":
     print("learning start")
-    alg =  "bollinger_band"#os.environ["ALG"]
-    ymd =  "2021-07-08"#os.environ["YMD"]
+    alg =  os.environ["ALG"]
+    ymd =  os.environ["YMD"]
     result = train(alg, ymd)
 
     print("learning end")
     
-    #simulate("correlation", "2020-12-01","2021-01-27")
-    #ensemble(["move_average", "ohlc", "bollinger_band", "stochastics"], "2020-01-01", "2021-02-26", "2020-06-01")
     
