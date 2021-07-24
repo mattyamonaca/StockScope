@@ -1,0 +1,8 @@
+version: "3"
+services:
+ ml-container:
+  image: 835636182609.dkr.ecr.us-east-2.amazonaws.com/learning:latest
+  build:
+   context: .
+   dockerfile: Dockerfile
+		
