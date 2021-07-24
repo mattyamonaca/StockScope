@@ -3,4 +3,5 @@ awswrangler
 pyyaml
 lightgbm
 sklearn
+pytest
 StockScope
