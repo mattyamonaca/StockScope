@@ -2,7 +2,7 @@ name: ml-deploy
 on:
  push:
    branches:
-     - deploy
+     - develop
 
 jobs:
  build:
