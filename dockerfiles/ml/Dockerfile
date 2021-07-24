@@ -5,6 +5,7 @@ COPY ./scripts ./scripts
 COPY ./setup.py ./setup.py
 
 RUN pip install -r requirements.txt
+RUN pip install StockScope
 RUN pip list
 
 RUN pytest
