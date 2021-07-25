@@ -1,15 +1,15 @@
-from scripts.ml.preprocess.processor import Processor
-from scripts.ml.preprocess.util import read_s3
-from scripts.ml.preprocess.move_average import MoveAverage
-from scripts.ml.preprocess.ohlc import Ohlc
-from scripts.ml.preprocess.bollinger_band import BollingerBand
-from scripts.ml.preprocess.stochastics import Stochastics
-from scripts.ml.preprocess.correlation import Correlation
-from scripts.ml.model.ml.lgbm import LgbModel
-from scripts.ml.model.ml.linner import LinnerModel
-from scripts.ml.preprocess.stacking import Stacking
-from scripts.ml.preprocess.util import check_ymd, save_parquet
-from scripts.ml.util import writer
+from ml.preprocess.processor import Processor
+from ml.preprocess.util import read_s3
+from ml.preprocess.move_average import MoveAverage
+from ml.preprocess.ohlc import Ohlc
+from ml.preprocess.bollinger_band import BollingerBand
+from ml.preprocess.stochastics import Stochastics
+from ml.preprocess.correlation import Correlation
+from ml.model.ml.lgbm import LgbModel
+from ml.model.ml.linner import LinnerModel
+from ml.preprocess.stacking import Stacking
+from ml.preprocess.util import check_ymd, save_parquet
+from ml.util import writer
 import glob
 
 import pandas as pd
