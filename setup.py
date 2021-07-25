@@ -3,5 +3,6 @@ from setuptools import setup, find_packages
 setup(
     name="stockscope",
     version="0.0.1",
-    packages=["scripts.ml"]
+    packages=find_packages(where="scripts"),
+    package_dir={"": "scripts"}
 )

@@ -1,5 +1,7 @@
 setup.py
 scripts/__init__.py
+scripts/ml/__init__.py
+scripts/ml/entry_point.py
 stockscope.egg-info/PKG-INFO
 stockscope.egg-info/SOURCES.txt
 stockscope.egg-info/dependency_links.txt
