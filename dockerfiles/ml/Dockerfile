@@ -9,4 +9,4 @@ RUN python setup.py install
 
 RUN pip install -r requirements.txt
 
-CMD ["python", "-m", "./scripts/ml/entry_point.py"]
+CMD ["python3", "-m", "./scripts/ml/entry_point.py"]
