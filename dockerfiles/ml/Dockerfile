@@ -8,5 +8,6 @@ RUN python setup.py build
 RUN python setup.py install
 
 RUN pip install -r requirements.txt
+WORKDIR /scripts/ml
 
-CMD ["python3", "-m", "./scripts/ml/entry_point.py"]
+CMD ["python3", "-m", "entry_point"]
