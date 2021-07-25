@@ -11,4 +11,6 @@ COPY config ./config
 COPY preprocess ./preprocess
 COPY model ./model
 
-CMD ["python3", "-m", "entry_point"]
+WORKDIR /scripts/ml
+
+RUN ["python3", "-m", "entry_point"]
