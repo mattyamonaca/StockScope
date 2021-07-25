@@ -8,8 +8,5 @@ RUN python setup.py build
 RUN python setup.py install
 
 RUN pip install -r requirements.txt
-RUN pip list
 
-RUN pytest
-
-#CMD ["python3", "-m", "entry_point"]
+CMD ["python3", "-m", "./scripts/ml/entry_point"]
