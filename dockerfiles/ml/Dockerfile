@@ -10,6 +10,6 @@ RUN python setup.py install
 RUN pip install -r requirements.txt
 RUN pip list
 
-#RUN pytest
+RUN pytest
 
 #CMD ["python3", "-m", "entry_point"]
