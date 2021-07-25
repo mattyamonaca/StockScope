@@ -1,4 +1,4 @@
-from ml.preprocess.processor import Processor
+from stockscope.ml.preprocess.processor import Processor
 from ml.preprocess.util import read_s3
 from ml.preprocess.move_average import MoveAverage
 from ml.preprocess.ohlc import Ohlc
