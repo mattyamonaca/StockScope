@@ -4,8 +4,8 @@ COPY ./scripts/ml/requirements.txt   ./
 COPY ./scripts ./scripts
 COPY ./setup.py ./setup.py
 
-RUN python setup.py build
-RUN python setup.py install
+RUN python3 setup.py build
+RUN python3 setup.py install
 
 RUN pip install -r requirements.txt
 WORKDIR /scripts/ml
