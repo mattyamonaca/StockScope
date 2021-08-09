@@ -8,21 +8,15 @@ from sklearn.model_selection import train_test_split
 from sklearn import preprocessing
 
 class BollingerBand:
-    def __init__(self, ymd, mode="main"):
-        self.ymd = ymd    
-        if mode == "main":
-            config_path = Path(__file__).parents[1].resolve() / "config" / "preprocess.yaml"
-            with open(config_path) as f:
-                self.config = yaml.load(f)
+    def __init__(self, ymd):
+        self.ymd = ymd
+        config_path = Path(__file__).parents[1].resolve() / "config" / "preprocess.yaml"
+        with open(config_path) as f:
+            config = yaml.load(f)
 
-
-    def data_read(self, test_data=None):
-        if test_data is None:
-            self.df_dict = self.s3_read(self.config)
-        else:
-            self.df_dict = test_data
+        self.df_dict = self.data_read(config)
     
-    def s3_read(self, config: dict) -> pd.DataFrame:
+    def data_read(self, config: dict) -> pd.DataFrame:
         df_dict = {}
         for k,v in config["PATH"].items():
             if k == "kabuka":
@@ -33,7 +27,7 @@ class BollingerBand:
                 )
         return df_dict
 
-    def data_build(self):
+    def merge(self):
         self.df = self.df_dict["kabuka"]
 
     def process(self):

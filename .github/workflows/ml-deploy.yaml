@@ -2,7 +2,7 @@ name: ml-deploy
 on:
  push:
    branches:
-     - develop
+     - fix/workflow
 
 jobs:
  build:
@@ -34,5 +34,6 @@ jobs:
         AWS_DEFAULT_REGION: us-east-2
        run: |
         docker-compose up --build
-        aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 835636182609.dkr.ecr.us-east-2.amazonaws.com
-        docker push 835636182609.dkr.ecr.us-east-2.amazonaws.com/learning:latest
+        docker tag stockscope_ml-container:latest 835636182609.dkr.ecr.us-east-2.amazonaws.com/learning:latest
+        #aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 835636182609.dkr.ecr.us-east-2.amazonaws.com
+        #docker push 835636182609.dkr.ecr.us-east-2.amazonaws.com/learning:latest
