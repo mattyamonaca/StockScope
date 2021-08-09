@@ -1,1 +1,7 @@
 scripts
+scripts/ml
+scripts/ml/config
+scripts/ml/model
+scripts/ml/model/ml
+scripts/ml/preprocess
+scripts/ml/util
