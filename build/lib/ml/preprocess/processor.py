@@ -6,7 +6,6 @@ class Processor:
         self.DataHandler = DataHandler(ymd)
 
     def run(self):
-        self.DataHandler.data_read()
-        self.DataHandler.data_build()
+        self.DataHandler.merge()
         df = self.DataHandler.process()
         return self.DataHandler.data_split(df)
